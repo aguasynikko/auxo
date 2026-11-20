@@ -36,6 +36,10 @@ _Avoid_: song (UI copy only), recording (data-source term only)
 **Tracklist**:
 The ordered tracks of one edition.
 
+**Unmatched album**:
+An album auxo knows only from Deezer because no confident MusicBrainz match exists yet. Fully usable; linked to MusicBrainz later if a match appears.
+_Avoid_: orphan, Deezer album
+
 ## People
 
 **User**:
@@ -60,7 +64,7 @@ The action of recording that you listened to an album. Logging creates a diary e
 _Avoid_: scrobble, "a log"
 
 **Diary entry**:
-The record of one listen to one album: date listened, optional rating snapshot, optional review, relisten flag and tags.
+The record of one listen to one album: date listened (today or earlier), optional edition, optional rating snapshot, optional review, relisten flag and tags.
 _Avoid_: listen (as a noun), log, entry, activity
 
 **Diary**:
@@ -96,7 +100,7 @@ _Avoid_: song rating
 The mean of all users' current album ratings for an album.
 
 **Rating curve**:
-An album's average track ratings plotted in tracklist order, showing its high and low points.
+Track ratings plotted in tracklist order, showing an album's high and low points. A user's own curve, or the community curve (tracks with at least 3 track ratings).
 
 **Aux-worthy**:
 A badge on an album whose average rating is at least 4.0 from at least 10 ratings.
@@ -109,6 +113,9 @@ _Avoid_: comment, post, note
 **Loved**:
 An album a user has marked with the heart. Unlimited, independent of rating.
 _Avoid_: favorite, liked (likes are for reviews)
+
+**Albums logged** (stat):
+The number of distinct albums with a diary entry dated in a period (e.g. this year). Not the number of diary entries.
 
 **Top 3**:
 The three albums a user places on the podium at the top of their profile, in order 1–3. Chosen from any album.
@@ -141,5 +148,5 @@ A user's choice to make another user unable to see or interact with them, both w
 A user's flag on a review, list or profile, for an admin to review.
 
 **Hidden**:
-The state of content an admin has taken down. Hidden content is invisible to everyone but its author and admins.
+The state of content an admin has taken down. Visible only to its author (with a notice) and admins.
 _Avoid_: deleted, removed, banned

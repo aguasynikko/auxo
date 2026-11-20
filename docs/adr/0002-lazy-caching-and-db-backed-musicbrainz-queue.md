@@ -4,10 +4,14 @@ Search results are live and never stored. An album, its editions, tracks and art
 
 MusicBrainz allows 1 request per second per client. Serverless functions can't share an in-memory queue, so fetches go into a `musicbrainz_queue` table that a single scheduled worker drains at 1 request/second, with a descriptive `User-Agent` and retry with backoff on 503. All external calls run server-side; API keys never reach the client.
 
+The queue has two priorities: user-triggered lookups (open, rate, log, save) go ahead of background work (re-sync, seed import). An album page renders immediately from Deezer data and fills in editions and tracks when MusicBrainz answers. The `User-Agent` is `auxo/<version> (https://github.com/aguasynikko/auxo)`, set from an env var.
+
 ## Considered options
+
 - In-memory queue or rate limiter in route handlers: rejected, serverless instances don't share memory.
 - Pre-importing the whole MusicBrainz dump: rejected for v1, too heavy for free-tier Postgres. A one-time seed of ~500 popular albums covers day one.
 
 ## Consequences
+
 - The UI needs a "still loading this album" state for first views.
 - Cached albums older than 30 days are re-synced by a background job.
