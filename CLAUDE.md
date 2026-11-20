@@ -35,8 +35,8 @@ pnpm only. `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm format`; full list 
 
 The repo owner is the only author. Write every commit message, PR, issue and file as if the owner wrote it.
 
-- Commit as the owner without touching git config (this container's default identity is wrong):
-  `git -c user.name=niko -c user.email=149151463+aguasynikko@users.noreply.github.com commit …`
+- Commit as the owner, unsigned, without touching git config (this container's default identity and signing key aren't the owner's):
+  `git -c user.name=niko -c user.email=149151463+aguasynikko@users.noreply.github.com -c commit.gpgsign=false commit …`
 - Commit messages and PR descriptions describe the change and stop there: no co-author trailers, no "Generated with" lines, no emoji signatures.
 - Keep Claude, Anthropic and AI out of commit messages, PRs, issues, ticket files, code comments, README and every other file.
 
