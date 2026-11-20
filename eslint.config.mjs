@@ -1,0 +1,11 @@
+// Ticket 1 adds eslint-config-next when Next.js is scaffolded.
+import js from "@eslint/js";
+import globals from "globals";
+import tseslint from "typescript-eslint";
+
+export default tseslint.config(
+  { ignores: ["node_modules/", ".next/", "dist/", "coverage/", "supabase/functions/"] },
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
+  { languageOptions: { globals: { ...globals.node, ...globals.browser } } },
+);
