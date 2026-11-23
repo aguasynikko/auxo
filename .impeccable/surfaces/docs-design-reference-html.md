@@ -17,6 +17,8 @@ Album obsessives on an iPhone, one-handed, usually mid-listen. Job: log a listen
 
 - Owner picked Catalogue as the default look, with Sleeve and Standard as alternative themes chosen in Settings. Themes swap tokens only (palette, star colour, glass tint, type voice, radii) over Catalogue's shared layout and components. Sleeve additionally grounds the album page in the album's sampled tone. Light and dark follow the system in every theme.
 - Log is a separate round glass button beside a four-tab bar (Home, Search, Diary, Profile), not a middle tab.
+- The owner asked to see the web app layout too: wide screens get the sidebar layout (spec story 73).
+- Glass never sits on album artwork (owner: must not feel like frosted chrome over the artwork).
 - Constraints: lowercase auxo; no Apple logos, trademarks or the Apple Music name; refraction is Chromium-only, Safari fallback must look finished; reduced motion and reduced transparency honoured.
 
 ## Direction contract
@@ -27,9 +29,9 @@ OWN-WORLD: Cool paper grey #f2f3f5 and ink #0b0c0e (dark: true black and #f3f4f6
 
 STORY: The visitor sees what they logged lately and what is waiting on listen later, logs a listen in one tap, opens an album, sees their rating and everyone's, rates tracks inline, and reads reviews.
 
-FIRST VIEWPORT: Home: large wordmark title with the ultramarine series square and avatar; the full-width ultramarine "What's on the aux?" log block; listen later shelf of 132px covers with spec lines; the month's diary list with day numerals begins above the floating glass tab bar and round Log button. Album: glass back and bookmark/more controls float over the full-width cover; title, artist, spec line, aux-worthy mark, then Log, listen later and loved.
+FIRST VIEWPORT: Home: large wordmark title with the ultramarine series square and avatar; the full-width ultramarine "What's on the aux?" log block; listen later shelf of 132px covers with spec lines; the month's diary list with day numerals begins above the floating glass tab bar and round Log button. Album: glass back and share/more controls float on the ground above the cover, never on the artwork; then the full-width cover, title, artist, spec line, aux-worthy mark, then Log, listen later and loved. Wide screens (from 1024px): a floating glass sidebar with the wordmark, the Log a listen button and the four sections replaces the tab bar; Home splits into the diary column and a listen later column; the album page keeps the cover, actions and your rating in a sticky left column beside the details.
 
-FORM: Grounded candidate 6 of 7 (record-label house style), seed: ad59b694a8b9141a. Signature move: the spec line with series colour marks, and the track bars (your track ratings as bars, everyone's average as a tick).
+FORM: Grounded candidate 6 of 7 (record-label house style), seed:ad59b694a8b9141a. Signature move: the spec line with series colour marks, and the track bars (your track ratings as bars, everyone's average as a tick).
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 

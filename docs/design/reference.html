@@ -678,7 +678,7 @@
 
       /* ================= themes: tokens only ================= */
       /* catalogue (default) */
-      .phone[data-look="catalogue"] {
+      :is(.phone, .desk)[data-look="catalogue"] {
         --font-display: var(--ui);
         --display-weight: 800;
         --display-track: -0.035em;
@@ -687,7 +687,7 @@
         --r-btn: 14px;
         --r-log: 16px;
       }
-      .phone[data-look="catalogue"][data-mode="light"] {
+      :is(.phone, .desk)[data-look="catalogue"][data-mode="light"] {
         --bg: #f2f3f5;
         --surface: #ffffff;
         --ink: #0b0c0e;
@@ -713,7 +713,7 @@
         --placeholder-bg: #e3e5e9;
         --placeholder-ink: #8d929a;
       }
-      .phone[data-look="catalogue"][data-mode="dark"] {
+      :is(.phone, .desk)[data-look="catalogue"][data-mode="dark"] {
         --bg: #000000;
         --surface: #111316;
         --ink: #f3f4f6;
@@ -740,7 +740,7 @@
         --placeholder-ink: #5d6169;
       }
       /* sleeve */
-      .phone[data-look="sleeve"] {
+      :is(.phone, .desk)[data-look="sleeve"] {
         --font-display: var(--serif);
         --display-weight: 600;
         --display-track: -0.015em;
@@ -749,7 +749,7 @@
         --r-btn: 25px;
         --r-log: 24px;
       }
-      .phone[data-look="sleeve"][data-mode="light"] {
+      :is(.phone, .desk)[data-look="sleeve"][data-mode="light"] {
         --bg: #f6f5f8;
         --surface: #ffffff;
         --ink: #1c1930;
@@ -775,7 +775,7 @@
         --placeholder-bg: #e6e3ec;
         --placeholder-ink: #8b86a0;
       }
-      .phone[data-look="sleeve"][data-mode="dark"] {
+      :is(.phone, .desk)[data-look="sleeve"][data-mode="dark"] {
         --bg: #0e0d13;
         --surface: #1a1922;
         --ink: #f4f0fa;
@@ -802,7 +802,7 @@
         --placeholder-ink: #625d78;
       }
       /* sleeve: the album page takes the album's sampled tones (set inline per album) */
-      .phone[data-look="sleeve"].album-page {
+      :is(.phone, .desk)[data-look="sleeve"].album-page {
         --bg: var(--sl-bg);
         --surface: var(--sl-surface);
         --ink: var(--sl-ink);
@@ -821,7 +821,7 @@
         --log-ink: var(--sl-accent-ink);
       }
       /* standard */
-      .phone[data-look="standard"] {
+      :is(.phone, .desk)[data-look="standard"] {
         --font-display: var(--ui);
         --display-weight: 700;
         --display-track: -0.01em;
@@ -830,7 +830,7 @@
         --r-btn: 12px;
         --r-log: 14px;
       }
-      .phone[data-look="standard"][data-mode="light"] {
+      :is(.phone, .desk)[data-look="standard"][data-mode="light"] {
         --bg: #f2f2f7;
         --surface: #ffffff;
         --ink: #000000;
@@ -856,7 +856,7 @@
         --placeholder-bg: #e5e5ea;
         --placeholder-ink: #8e8e93;
       }
-      .phone[data-look="standard"][data-mode="dark"] {
+      :is(.phone, .desk)[data-look="standard"][data-mode="dark"] {
         --bg: #000000;
         --surface: #1c1c1e;
         --ink: #ffffff;
@@ -1113,10 +1113,10 @@
         font-weight: 500;
         border-top: 0.5px solid var(--rule);
       }
-      .phone[data-look="sleeve"] {
+      :is(.phone, .desk)[data-look="sleeve"] {
         --font-read: var(--serif);
       }
-      .phone {
+      :is(.phone, .desk) {
         --font-read: var(--ui);
       }
 
@@ -1434,7 +1434,7 @@
         margin-top: 8px;
         color: var(--ink);
       }
-      .phone[data-look="sleeve"] .rv-body {
+      :is(.phone, .desk)[data-look="sleeve"] .rv-body {
         font-size: 17px;
       }
 
@@ -1521,6 +1521,15 @@
         line-height: 1.4;
       }
 
+      @media (min-width: 1100px) {
+        .phones {
+          flex-wrap: wrap;
+          overflow-x: visible;
+          scroll-snap-type: none;
+          row-gap: 36px;
+        }
+      }
+
       /* ================= share cards ================= */
       .cards {
         display: flex;
@@ -1595,10 +1604,6 @@
       }
       .card-square > .ci {
         padding: 6cqw;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 5cqw;
-        align-items: center;
       }
       .c-top {
         display: flex;
@@ -1693,68 +1698,399 @@
         height: 8cqw;
         font-size: 3cqw;
       }
-      .card-square .c-side {
+      .card-square > .ci {
         display: flex;
         flex-direction: column;
-        gap: 3cqw;
-        height: 100%;
-        justify-content: space-between;
+        gap: 5cqw;
+      }
+      .sq-mid {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 58% 1fr;
+        gap: 5cqw;
+        align-items: end;
+      }
+      .sq-text {
+        display: grid;
+        gap: 2cqw;
       }
       .card-square .c-wm {
-        font-size: 6cqw;
+        font-size: 6.4cqw;
+      }
+      .card-square .c-date {
+        font-size: 2.6cqw;
       }
       .card-square .c-title {
-        font-size: 5.6cqw;
+        font-size: 6.4cqw;
         margin: 0;
       }
       .card-square .c-artist {
-        font-size: 3.8cqw;
+        font-size: 4cqw;
       }
       .card-square .c-spec {
         font-size: 2.6cqw;
       }
+      .sq-foot {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        font: 600 3.2cqw var(--ui);
+        color: var(--ink-2);
+      }
       .card-square .c-rating {
-        --star-size: 3.6cqw;
-        gap: 1.6cqw;
+        --star-size: 7cqw;
+        gap: 3cqw;
       }
       .card-square .c-rating b {
-        font-size: 5cqw;
-      }
-      .card-square .c-foot {
-        font-size: 2.8cqw;
-        margin: 0;
+        font-size: 13cqw;
+        line-height: 0.8;
+        color: var(--ink);
       }
       .c-top3 {
         list-style: none;
-        margin: 4cqw 0 0;
+        margin: 3cqw 0 0;
         padding: 0;
         display: grid;
-        gap: 4cqw;
+        gap: 5cqw;
       }
       .c-top3 li {
         display: grid;
-        grid-template-columns: 8cqw 24cqw 1fr;
+        grid-template-columns: 9cqw 38cqw 1fr;
         gap: 4cqw;
-        align-items: center;
+        align-items: end;
       }
       .c-top3 .cover {
-        width: 24cqw;
+        width: 38cqw;
       }
       .c-pos {
-        font: 800 8cqw/1 var(--ui);
+        font: 800 13cqw/0.8 var(--ui);
         letter-spacing: -0.04em;
         color: var(--accent-text);
       }
       .c-top3 b {
         display: block;
-        font: 700 4.6cqw/1.15 var(--ui);
-        letter-spacing: -0.01em;
+        font: 800 5.4cqw/1.1 var(--ui);
+        letter-spacing: -0.02em;
+      }
+      .c-top3 .c-spec {
+        margin-top: 2cqw;
+        font-size: 2.8cqw;
       }
       .c-top3 small {
         display: block;
-        font: 400 3.6cqw/1.3 var(--ui);
+        font: 600 4cqw/1.3 var(--ui);
         color: var(--ink-2);
         margin-top: 1cqw;
+      }
+
+      /* ================= wide layout (iPad, desktop, web) ================= */
+      .desk-wrap {
+        display: grid;
+        gap: 28px;
+      }
+      .desk-fig {
+        margin: 0;
+        display: grid;
+        gap: 10px;
+      }
+      .desk-fig figcaption {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--page-ink-2);
+      }
+      .desk-scale {
+        width: 100%;
+        overflow: hidden;
+      }
+      .desk {
+        width: 1280px;
+        height: 800px;
+        border-radius: 14px;
+        overflow: hidden;
+        position: relative;
+        background: var(--bg);
+        color: var(--ink);
+        font: 400 15px/1.35 var(--ui);
+        box-shadow:
+          0 0 0 1px rgba(0, 0, 0, 0.12),
+          0 40px 80px -40px rgba(0, 0, 0, 0.45);
+        display: grid;
+        grid-template-rows: 40px 1fr;
+        isolation: isolate;
+        transform-origin: top left;
+        --star-size: 13px;
+      }
+      .desk ::selection {
+        background: color-mix(in srgb, var(--accent) 30%, transparent);
+      }
+      .desk-bar {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 14px;
+        background: var(--surface);
+        border-bottom: 0.5px solid var(--rule);
+      }
+      .desk-bar .dots {
+        display: flex;
+        gap: 7px;
+      }
+      .desk-bar .dots i {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: var(--rule);
+      }
+      .desk-bar .url {
+        flex: 0 1 420px;
+        margin: 0 auto;
+        height: 26px;
+        border-radius: 8px;
+        background: color-mix(in srgb, var(--ink) 6%, transparent);
+        color: var(--ink-2);
+        font-size: 12.5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .desk-body {
+        position: relative;
+        overflow: hidden;
+      }
+      .desk-main {
+        position: absolute;
+        inset: 0;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        padding: 28px 48px 60px 312px;
+      }
+      .sidebar {
+        position: absolute;
+        z-index: 5;
+        top: 12px;
+        left: 12px;
+        bottom: 12px;
+        width: 264px;
+        border-radius: 24px;
+        padding: 22px 14px 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .sidebar .wordmark {
+        font-size: 32px;
+        padding: 0 10px 14px;
+      }
+      .side-log {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        height: 42px;
+        border: 0;
+        border-radius: var(--r-btn);
+        background: var(--accent);
+        color: var(--accent-ink);
+        font: 600 15px var(--ui);
+        margin: 0 2px 14px;
+        cursor: pointer;
+      }
+      .side-log .ico {
+        width: 18px;
+        height: 18px;
+        stroke-width: 2.4;
+      }
+      .side-nav {
+        display: grid;
+        gap: 2px;
+      }
+      .side-nav a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        height: 40px;
+        padding: 0 12px;
+        border-radius: 12px;
+        color: var(--ink);
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+      }
+      .side-nav a .ico {
+        width: 20px;
+        height: 20px;
+      }
+      .side-nav a.sel {
+        background: var(--tab-sel);
+        color: var(--tab-sel-ink);
+        font-weight: 600;
+      }
+      .side-nav a .count {
+        margin-left: auto;
+        font-size: 12px;
+        color: var(--ink-3);
+        font-variant-numeric: tabular-nums;
+      }
+      .side-foot {
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border-top: 0.5px solid var(--rule);
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .side-foot .avatar {
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
+      }
+      .side-foot .ico {
+        margin-left: auto;
+        width: 18px;
+        height: 18px;
+        color: var(--ink-3);
+      }
+
+      .d-title {
+        font: var(--display-weight) 34px/1.1 var(--font-display);
+        letter-spacing: var(--display-track);
+        margin: 4px 0 20px;
+      }
+      .d-home {
+        display: grid;
+        grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+        gap: 28px;
+        align-items: start;
+      }
+      .desk .log-block {
+        margin: 0 0 4px;
+        width: 100%;
+      }
+      .desk .month {
+        margin: 0;
+      }
+      .desk .sec-h {
+        padding: 26px 0 10px;
+      }
+      .d-later {
+        background: var(--surface);
+        border-radius: var(--r-panel);
+        overflow: hidden;
+      }
+      .d-later-row {
+        display: grid;
+        grid-template-columns: 56px 1fr;
+        gap: 12px;
+        align-items: center;
+        padding: 10px 14px;
+        position: relative;
+      }
+      .d-later-row + .d-later-row::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 82px;
+        right: 0;
+        border-top: 0.5px solid var(--rule);
+      }
+      .d-later-row .cover {
+        width: 56px;
+        height: 56px;
+        border-radius: min(var(--r-art), 8px);
+      }
+      .d-later-row .ttl {
+        font-size: 15px;
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .d-later-row .art {
+        font-size: 13px;
+        color: var(--ink-2);
+        margin-bottom: 3px;
+      }
+
+      .d-album {
+        display: grid;
+        grid-template-columns: 360px minmax(0, 1fr);
+        gap: 40px;
+        align-items: start;
+        max-width: 960px;
+      }
+      .d-album .left {
+        position: sticky;
+        top: 0;
+        display: grid;
+        gap: 12px;
+      }
+      .d-album .left .cover {
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: var(--r-art);
+        box-shadow: 0 24px 40px -24px rgba(0, 0, 0, 0.5);
+      }
+      .d-album .actions {
+        margin: 4px 0 0;
+      }
+      .d-album .panel {
+        margin-top: 0;
+      }
+      .d-album .right {
+        display: grid;
+        gap: 12px;
+        min-width: 0;
+      }
+      .d-album .al-title {
+        font-size: 40px;
+        margin: 0;
+      }
+      .d-album .al-artist {
+        font-size: 21px;
+      }
+      .d-album .tracks {
+        margin-top: 0;
+      }
+      .d-album .section-h {
+        margin: 16px 0 0;
+      }
+      .d-crumb {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 13px;
+        color: var(--ink-2);
+        margin-bottom: 18px;
+      }
+      .d-crumb .ico {
+        width: 14px;
+        height: 14px;
+      }
+      .d-two {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .d-two .panel {
+        margin: 0;
+      }
+
+      .d-crumb .d-tools {
+        margin-left: auto;
+        display: flex;
+        gap: 8px;
+      }
+      .d-crumb .d-tools .btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        color: var(--ink);
+      }
+      .d-crumb .d-tools .ico {
+        width: 20px;
+        height: 20px;
       }
     </style>
   </head>
@@ -1811,12 +2147,34 @@
           <div>
             <h2 id="screens-h">Screens</h2>
             <p class="thesis">
-              Home, the album page and Settings. Scroll a phone down: the large title gives way to
-              an inline one and the tab bar shrinks to the current tab and the Log button.
+              Home, the album page (at rest and scrolled to the tracklist) and Settings. Scroll a
+              phone down: the large title gives way to an inline one and the tab bar shrinks to the
+              current tab and the Log button.
             </p>
           </div>
         </div>
         <div class="phones" id="phones"></div>
+      </section>
+
+      <section class="dir" aria-labelledby="wide-h">
+        <div class="dir-head" style="margin-bottom: 8px">
+          <div>
+            <h2 id="wide-h">Web app, wide screens</h2>
+            <p class="thesis">
+              From 1024px wide (iPad landscape, laptops, desktop browsers) the tab bar becomes a
+              glass sidebar with the wordmark and the Log button, Home splits into two columns, and
+              the album page keeps the cover and your rating beside the details.
+            </p>
+            <div class="controls">
+              <span class="ctl-label" id="dm-lbl">Mode</span>
+              <div class="seg" role="group" aria-labelledby="dm-lbl">
+                <button type="button" data-desk-mode="light" aria-pressed="true">Light</button
+                ><button type="button" data-desk-mode="dark" aria-pressed="false">Dark</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="desk-wrap" id="desks"></div>
       </section>
 
       <section class="dir" aria-labelledby="brand-h">
@@ -2262,7 +2620,7 @@
         {
           id: "standard",
           name: "Standard",
-          note: "The iPhone’s own system colours.",
+          note: "The system’s own colours, like the built-in apps.",
           sw: ["#f2f2f7", "#000000", "#007aff", "#ff9500"],
         },
       ];
@@ -2279,10 +2637,12 @@
         return `<h1 class="set-title">settings</h1>
   <div class="group-h">Theme</div>
   <div class="group" role="radiogroup" aria-label="Theme">${rows}</div>
-  <p class="group-foot">Light and dark follow your iPhone’s appearance in every theme.</p>
+  <p class="group-foot">Light and dark follow your device’s appearance in every theme.</p>
   <div class="group-h">Account</div>
   <div class="group">${["Edit profile", "Export your data", "About auxo", "Sign out"].map((t) => `<div class="cell"><span></span><span>${t}</span><span class="chev">${icon("chev")}</span></div>`).join("")}</div>`;
       }
+      const albumNavRef = (title) =>
+        `<div class="navbar"><button class="gbtn glass" aria-label="Back">${icon("back")}</button><span class="inline-title">${title}</span><div class="gcap glass"><button class="gbtn" aria-label="Share">${icon("share")}</button><button class="gbtn" aria-label="More">${icon("more")}</button></div></div>`;
       const settingsNav = `<div class="navbar"><button class="gbtn glass" aria-label="Back to profile">${icon("back")}</button><span class="inline-title">settings</span><span style="width:44px"></span></div>`;
 
       function renderPhones(look) {
@@ -2293,13 +2653,22 @@
           );
         for (const m of ["light", "dark"])
           out.push(
-            `<figure class="phone-fig"><figcaption>Album · ${m}</figcaption>${phoneFor(look, m, { label: "Album page", body: albumScreen(), nav: albumNav("Low Season", true), tab: "home", cls: "album-page", style: sleeveVars("low", m) })}</figure>`,
+            `<figure class="phone-fig"><figcaption>Album · ${m}</figcaption>${phoneFor(look, m, { label: "Album page", body: albumScreen(), nav: albumNavRef("Low Season"), tab: "home", cls: "album-page", style: sleeveVars("low", m) })}</figure>`,
+          );
+        for (const m of ["light", "dark"])
+          out.push(
+            `<figure class="phone-fig"><figcaption>Album, scrolled · ${m}</figcaption>${phoneFor(look, m, { label: "Album page scrolled to the tracklist", body: albumScreen(), nav: albumNavRef("Low Season"), tab: "home", cls: "album-page scrolled min", style: sleeveVars("low", m) + ";--start:tracklist" })}</figure>`,
           );
         for (const m of ["light", "dark"])
           out.push(
             `<figure class="phone-fig"><figcaption>Settings · ${m}</figcaption>${phoneFor(look, m, { label: "Settings", body: settingsScreen(look), nav: settingsNav, tab: "profile" })}</figure>`,
           );
         document.getElementById("phones").innerHTML = out.join("");
+        document.querySelectorAll(".phone.scrolled.min").forEach((p) => {
+          const s = p.querySelector(".screen");
+          const t = p.querySelector(".yours");
+          s.scrollTop = t.offsetTop - 112;
+        });
         wirePhones();
         applyRefraction();
       }
@@ -2319,29 +2688,118 @@
       }
       function shareRating(mode) {
         return `<div class="card card-square" data-mode="${mode}" role="img" aria-label="Rating share card, ${mode}"><div class="ci">
-    ${cover("night", "Night Bus to Ostend cover")}
-    <div class="c-side">
-      <span class="c-wm">auxo<i></i></span>
-      <div><div class="c-title">Night Bus to Ostend</div><div class="c-artist">The Calloways</div></div>
-      <div class="c-spec"><i class="series" style="background:${SERIES.Album}"></i>ALBUM · 2016</div>
-      <div class="c-rating">${stars(5, false)}<b class="num">5</b></div>
-      <div class="c-foot"><span>maya.k</span><span class="num">18 NOV</span></div>
-    </div>
+    <div class="c-top"><span class="c-wm">auxo<i></i></span><span class="c-date num">18 NOV 2026</span></div>
+    <div class="sq-mid">${cover("night", "Night Bus to Ostend cover")}<div class="sq-text"><div class="c-title">Night Bus to Ostend</div><div class="c-artist">The Calloways</div><div class="c-spec"><i class="series" style="background:${SERIES.Album}"></i>ALBUM · 2016</div></div></div>
+    <div class="sq-foot"><div class="c-rating">${stars(5, false)}<b class="num">5</b></div><span>maya.k</span></div>
   </div></div>`;
       }
       function shareTop3(mode) {
         const t = [
-          ["night", "Night Bus to Ostend", "The Calloways"],
-          ["low", "Low Season", "Marigold Hour"],
-          ["ame", "雨の記録", "Haruka Ito"],
+          ["night", "Night Bus to Ostend", "The Calloways", "ALBUM · 2016"],
+          ["low", "Low Season", "Marigold Hour", "ALBUM · 2019"],
+          ["ame", "雨の記録", "Haruka Ito", "ALBUM · 2021"],
         ];
         return `<div class="card card-story" data-mode="${mode}" role="img" aria-label="Top 3 share card, ${mode}"><div class="ci">
     <div class="c-top"><span class="c-wm">auxo<i></i></span><span class="c-date">maya.k</span></div>
     <div class="c-title" style="margin-top:6%">top 3</div>
-    <ol class="c-top3">${t.map(([k, ti, ar], i) => `<li><span class="c-pos num">${i + 1}</span>${cover(k, ti)}<span><b>${ti}</b><small>${ar}</small></span></li>`).join("")}</ol>
+    <ol class="c-top3">${t.map(([k, ti, ar, sp], i) => `<li><span class="c-pos num">${i + 1}</span>${cover(k, ti)}<span><b>${ti}</b><small>${ar}</small><span class="c-spec"><i class="series" style="background:${SERIES.Album}"></i>${sp}</span></span></li>`).join("")}</ol>
     <div class="c-foot"><span>on auxo</span></div>
   </div></div>`;
       }
+
+      /* ================= wide layout (iPad, desktop, web) ================= */
+      function sidebar(sel) {
+        const items = [
+          ["home", "Home"],
+          ["search", "Search"],
+          ["diary", "Diary", "128"],
+          ["profile", "Profile"],
+        ];
+        return `<aside class="sidebar glass" aria-label="auxo">${wordmark}
+    <button class="side-log">${icon("plus")}Log a listen</button>
+    <nav class="side-nav">${items.map(([k, l, n]) => `<a class="${k === sel ? "sel" : ""}" ${k === sel ? 'aria-current="page"' : ""}>${icon(k)}${l}${n ? `<span class="count">${n}</span>` : ""}</a>`).join("")}</nav>
+    <div class="side-foot"><span class="avatar">MK</span>maya.k${icon("more")}</div></aside>`;
+      }
+      function deskFrame(look, mode, { url, sel, body, cls = "", style = "", label }) {
+        return `<div class="desk ${cls}" data-look="${look}" data-mode="${mode}" style="${style}" role="group" aria-label="${label}, ${mode} mode">
+    <div class="desk-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">${url}</span></div>
+    <div class="desk-body">${sidebar(sel)}<div class="desk-main">${body}</div></div></div>`;
+      }
+      function deskHome() {
+        const month = DIARY.map((e) => {
+          const a = AL[e.k];
+          return `<div class="entry"><div class="day"><b>${e.d}</b><small>${e.wd}</small></div>${cover(e.k, a.t)}<div class="mid"><div class="ttl">${a.t}</div><div class="art">${a.a}</div><div class="meta">${stars(e.r)}${e.relisten ? icon("relisten", "ico row-ico") : ""}${e.review ? icon("review", "ico row-ico") : ""}</div></div>${e.review ? `<div class="excerpt">${e.review}</div>` : ""}</div>`;
+        }).join("");
+        const later = LATER.map((k) => {
+          const a = AL[k];
+          return `<div class="d-later-row">${cover(k, a.t)}<div style="min-width:0"><div class="ttl">${a.t}</div><div class="art">${a.a}</div><div class="spec"><i class="series" style="background:${SERIES[a.type]}"></i>${a.type} · ${a.y}</div></div></div>`;
+        }).join("");
+        return `<h1 class="d-title">home</h1>
+  <div class="d-home">
+    <div><button class="log-block"><span class="t"><strong>What’s on the aux?</strong><small>Log a listen, rate it, say why</small></span><span class="plus">${icon("plus")}</span></button>
+      <div class="sec-h"><h3>november</h3><a>diary</a></div><div class="month">${month}<a class="more">All of your diary</a></div></div>
+    <div><div class="sec-h" style="padding-top:0"><h3>listen later</h3><a>5 albums</a></div><div class="d-later">${later}</div></div>
+  </div>`;
+      }
+      function deskAlbum() {
+        const curve = TRACKS.map(([, , me, all]) =>
+          me == null
+            ? `<div class="col none"><div class="bar"></div></div>`
+            : `<div class="col"><div class="bar" style="height:${(me / 5) * 100}%"></div><div class="tick" style="bottom:${(all / 5) * 100}%"></div></div>`,
+        ).join("");
+        const tracks = TRACKS.map(
+          ([t, d, me], i) =>
+            `<div class="track"><span class="no">${String(i + 1).padStart(2, "0")}</span><span class="tt">${t}</span><span class="dur">${d}</span>${me == null ? '<span class="tr empty">Rate</span>' : `<span class="tr" aria-label="Your rating ${me} out of 5">${starGlyph}${me}</span>`}</div>`,
+        ).join("");
+        const reviews = REVIEWS.map(
+          (r) =>
+            `<div class="review"><div class="rv-head"><div class="avatar" style="background:${r.bg}">${r.ini}</div><span class="who">${r.who}</span>${stars(r.r)}<span class="when">${r.when}</span></div><div class="rv-body">${r.body}</div></div>`,
+        ).join("");
+        return `<div class="d-crumb"><span>Home</span>${icon("chev", "ico")}<span>Low Season</span><span class="d-tools"><button class="btn plain" aria-label="Share">${icon("share")}</button><button class="btn plain" aria-label="More">${icon("more")}</button></span></div>
+  <div class="d-album">
+    <div class="left">${cover("low", "Low Season cover")}
+      <div class="actions"><button class="btn primary">${icon("plus")}Log</button><button class="btn plain on" aria-label="In listen later">${icon("bookmarkFill")}</button><button class="btn plain on" aria-label="Loved">${icon("heartFill")}</button></div>
+      <div class="panel yours"><div><div class="lbl">Your rating</div><div style="margin-top:6px;--star-size:24px;--star-gap:4px">${stars(4.5)}</div></div><span class="big num">4.5</span></div>
+    </div>
+    <div class="right">
+      <h1 class="al-title">Low Season</h1><div class="al-artist">Marigold Hour</div>
+      <div class="specline" style="margin:0"><span class="spec"><i class="series" style="background:${SERIES.Album}"></i>Album · 2019 · Dream pop, Shoegaze</span><span class="badge-aw">${icon("spark", "ico fill")}aux-worthy</span></div>
+      <div class="d-two"><div class="panel"><div class="avg"><div><div class="big num">4.1</div><div class="sub num">1,284 ratings</div></div><div>${hist(8)}</div></div></div>
+      <div class="panel"><div class="curve" style="margin:0" role="img" aria-label="Your rating curve against everyone's">${curve}</div><div class="curve-axis">${TRACKS.map((_, i) => `<span>${i + 1}</span>`).join("")}</div><div class="legend"><span><i style="background:var(--accent)"></i>you</span><span><i style="background:var(--tick);height:2px;vertical-align:3px"></i>everyone</span><span><i style="background:repeating-linear-gradient(135deg, var(--rule) 0 2px, transparent 2px 4px)"></i>not rated</span></div></div></div>
+      <div class="panel edition"><div class="t"><div class="k">Edition</div><div class="v">Original release · 2019 · 11 tracks</div></div><span class="n">3 editions${icon("chev", "ico row-ico")}</span></div>
+      <h2 class="section-h">tracklist <small>45:38</small></h2>
+      <div class="tracks">${tracks}</div>
+      <h2 class="section-h">recent reviews <small>212</small></h2>
+      <div>${reviews}</div>
+      <div class="credit" style="text-align:left;padding-left:0">Data from MusicBrainz and Deezer</div>
+    </div>
+  </div>`;
+      }
+      let deskMode = "light";
+      function renderDesks(look) {
+        document.getElementById("desks").innerHTML =
+          `<figure class="desk-fig"><figcaption>Home · wide</figcaption><div class="desk-scale">${deskFrame(look, deskMode, { url: "/", sel: "home", body: deskHome(), label: "Home, wide layout" })}</div></figure>` +
+          `<figure class="desk-fig"><figcaption>Album · wide</figcaption><div class="desk-scale">${deskFrame(look, deskMode, { url: "/album/low-season-x7k2", sel: "home", body: deskAlbum(), cls: "album-page", style: sleeveVars("low", deskMode), label: "Album page, wide layout" })}</div></figure>`;
+        fitDesks();
+      }
+      function fitDesks() {
+        document.querySelectorAll(".desk-scale").forEach((w) => {
+          const d = w.firstElementChild;
+          const k = Math.min(1, w.clientWidth / 1280);
+          d.style.transform = `scale(${k})`;
+          w.style.height = `${800 * k}px`;
+        });
+      }
+      addEventListener("resize", fitDesks);
+      document.querySelectorAll("[data-desk-mode]").forEach((b) =>
+        b.addEventListener("click", () => {
+          deskMode = b.dataset.deskMode;
+          document
+            .querySelectorAll("[data-desk-mode]")
+            .forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+          renderDesks(currentLook);
+        }),
+      );
 
       const BRAND = {
         wm: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -1597 5196 1637" role="img" aria-labelledby="t">\n  <title id="t">auxo</title>\n  <path fill="#0b0c0e" d="M428 20C583 20 691 -42 752 -157H761V0H1089V-759C1089 -999 870 -1132 592 -1132C312 -1132 136 -1001 92 -810L408 -769C427 -839 492 -884 589 -884C684 -884 741 -840 741 -763V-759C741 -690 665 -676 476 -660C250 -641 60 -558 60 -310C60 -89 213 20 428 20ZM534 -211C450 -211 390 -251 390 -326C390 -400 448 -444 551 -459C616 -469 704 -484 744 -505V-398C744 -288 651 -211 534 -211Z M1626.08 14C1806.08 14 1916.08 -86 1976.08 -242L1981.08 0H2309.08V-1118H1960.08V-480C1960.08 -350 1883.08 -273 1769.08 -273C1655.08 -273 1587.08 -348 1587.08 -474V-1118H1238.08V-406C1238.08 -153 1391.08 14 1626.08 14Z M2375.16 0H2738.16L2844.16 -194C2882.16 -265 2914.16 -338 2945.16 -410C2978.16 -338 3012.16 -265 3050.16 -194L3158.16 0H3526.16L3176.16 -572L3511.16 -1118H3147.16L3057.16 -958C3018.16 -888 2985.16 -814 2953.16 -742C2921.16 -814 2889.16 -887 2852.16 -958L2766.16 -1118H2396.16L2722.16 -574Z M4111.24 21C4460.24 21 4672.24 -211 4672.24 -555C4672.24 -900 4460.24 -1132 4111.24 -1132C3761.24 -1132 3549.24 -900 3549.24 -555C3549.24 -211 3761.24 21 4111.24 21ZM4111.24 -246C3977.24 -246 3905.24 -371 3905.24 -557C3905.24 -744 3977.24 -865 4111.24 -865C4245.24 -865 4317.24 -744 4317.24 -557C4317.24 -371 4245.24 -246 4111.24 -246Z"/>\n  <rect fill="#2e3bff" x="4868" y="-1597" width="328" height="328"/>\n</svg>',
@@ -2355,12 +2813,12 @@
   <figure><div class="wm-tile" style="background:#000">${sized(BRAND.wmDark, 'height="56"')}</div><figcaption>Wordmark on black</figcaption></figure>
   <figure><div class="home-tile wall-light"><div class="ico-wrap"><div class="app-icon">${BRAND.icon}</div><span class="ico-label">auxo</span></div></div><figcaption>App icon, light wallpaper</figcaption></figure>
   <figure><div class="home-tile wall-dark"><div class="ico-wrap"><div class="app-icon">${BRAND.icon}</div><span class="ico-label">auxo</span></div></div><figcaption>App icon, dark wallpaper</figcaption></figure>`;
+
       /* ---------- behaviour: collapse title, shrink tab bar ---------- */
-      const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
       function wirePhones() {
         document.querySelectorAll(".phone").forEach((p) => {
           const s = p.querySelector(".screen");
-          let last = 0;
+          let last = s.scrollTop;
           s.addEventListener(
             "scroll",
             () => {
@@ -2406,7 +2864,7 @@
               qy = Math.abs(py) - (h / 2 - r);
             const ox = Math.max(qx, 0),
               oy = Math.max(qy, 0);
-            const dist = r - (Math.hypot(ox, oy) + Math.min(Math.max(qx, qy), 0)); // distance inside edge
+            const dist = r - (Math.hypot(ox, oy) + Math.min(Math.max(qx, qy), 0));
             let nx = 0,
               ny = 0;
             if (qx > 0 || qy > 0) {
@@ -2434,13 +2892,13 @@
         scope.querySelectorAll(".glass").forEach((el) => {
           const w = Math.round(el.offsetWidth),
             h = Math.round(el.offsetHeight);
-          if (!w || !h) return;
+          if (!w || !h || w * h > 200000) return;
           const r = Math.min(h / 2, parseFloat(getComputedStyle(el).borderTopLeftRadius) || 0);
           if (el.dataset.sz === `${w}x${h}`) return;
           el.dataset.sz = `${w}x${h}`;
           const id = el.dataset.fid || "lg" + ++fid;
           el.dataset.fid = id;
-          let f = document.getElementById(id);
+          const f = document.getElementById(id);
           if (f) f.remove();
           defs.insertAdjacentHTML(
             "beforeend",
@@ -2507,6 +2965,7 @@
           localStorage.setItem("auxo-ref-look", l);
         } catch (e) {}
         renderPhones(l);
+        renderDesks(l);
       }
       document
         .querySelectorAll("[data-look-set]")
