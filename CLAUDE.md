@@ -14,15 +14,25 @@ The name is always lowercase: **auxo**, also at the start of a sentence, in titl
 
 ## Commands
 
-pnpm only. `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm format`; full list in `package.json`. The pre-commit hook runs lint-staged, typecheck and tests; CI runs lint, format check, typecheck and tests on every PR.
+pnpm only. Full list in `package.json`.
+
+- `pnpm dev` — Next.js dev server on http://localhost:3000
+- `pnpm build` / `pnpm start` — production build and server
+- `pnpm lint`, `pnpm typecheck`, `pnpm format` (`pnpm format:check` in CI)
+- `pnpm test` — Vitest (`pnpm test:watch` while working)
+- `pnpm e2e` — Playwright, phone and desktop projects; builds the app and serves it on port 3100. Add `--project=phone` or `--project=desktop` to run one viewport
+
+The pre-commit hook runs lint-staged, typecheck and tests. CI runs lint, format check, typecheck and tests, plus `pnpm e2e` in a separate job, on every PR.
 
 ## Layout
 
 - `docs/` — spec, glossary, ADRs, agent docs, `retros/`
+- `src/app/` — Next.js App Router (TypeScript, Tailwind v4); `@/*` imports resolve to `src/*`
 - `tests/` — Vitest tests
+- `e2e/` — Playwright tests (Seam 4)
 - `.claude/` — project settings and the git guardrail hook
 - `.github/workflows/` — CI
-- Coming with the first tickets: the Next.js app (#3) and `supabase/` with migrations and Edge Functions (#4)
+- Coming next: `supabase/` with migrations and Edge Functions (#4)
 
 ## Conventions
 

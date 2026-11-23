@@ -19,12 +19,26 @@ Thumbs.db
 *.log
 logs/
 
-# Dependencies, build output and caches (extended once the stack is chosen)
+# Dependencies, build output and caches
 node_modules/
 dist/
 build/
 coverage/
 .cache/
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+
+# Vercel
+.vercel
 
 # Impeccable runtime files (briefs, design.json and config are committed)
 .impeccable/review/
