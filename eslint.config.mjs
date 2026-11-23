@@ -1,11 +1,18 @@
-// Ticket 1 adds eslint-config-next when Next.js is scaffolded.
-import js from "@eslint/js";
-import globals from "globals";
-import tseslint from "typescript-eslint";
+import { defineConfig, globalIgnores } from "eslint/config";
+import nextVitals from "eslint-config-next/core-web-vitals";
+import nextTs from "eslint-config-next/typescript";
 
-export default tseslint.config(
-  { ignores: ["node_modules/", ".next/", "dist/", "coverage/", "supabase/functions/"] },
-  js.configs.recommended,
-  ...tseslint.configs.recommended,
-  { languageOptions: { globals: { ...globals.node, ...globals.browser } } },
-);
+export default defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  globalIgnores([
+    "node_modules/",
+    ".next/",
+    "next-env.d.ts",
+    "dist/",
+    "coverage/",
+    "playwright-report/",
+    "test-results/",
+    "supabase/functions/",
+  ]),
+]);
