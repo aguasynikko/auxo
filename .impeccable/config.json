@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-font",
+        "value": "source serif 4",
+        "createdAt": "2026-11-23T13:46:10.160Z",
+        "reason": "DESIGN.md typography names Source Serif 4 as the web fallback for ui-serif in the Sleeve theme"
+      }
+    ]
+  }
+}

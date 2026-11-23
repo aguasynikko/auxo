@@ -121,6 +121,16 @@ The number of distinct albums with a diary entry dated in a period (e.g. this ye
 The three albums a user places on the podium at the top of their profile, in order 1–3. Chosen from any album.
 _Avoid_: favorites, favourite albums, top picks
 
+## Appearance
+
+**Theme**:
+A user's choice of look in Settings: Catalogue (the default), Sleeve or Standard. A theme swaps colours, star colour, glass tint, display face and corner radii; layout and components stay the same. Stored on the profile.
+_Avoid_: skin, style, direction (that was a design-session word)
+
+**Appearance mode**:
+Light or dark. Follows the system in every theme; not a user setting in Milestone 1.
+_Avoid_: theme (for light/dark)
+
 ## Social (Milestone 2)
 
 **Follow**:
