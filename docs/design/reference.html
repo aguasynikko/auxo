@@ -837,8 +837,8 @@
         --ink-2: #6c6c70;
         --ink-3: #6c6c70;
         --rule: rgba(60, 60, 67, 0.29);
-        --accent: #007aff;
-        --accent-text: #007aff;
+        --accent: #0066d6;
+        --accent-text: #0066d6;
         --accent-ink: #ffffff;
         --star: #ff9500;
         --star-empty: rgba(60, 60, 67, 0.18);
@@ -850,8 +850,8 @@
         --glass-spec: rgba(255, 255, 255, 0.9);
         --glass-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
         --tab-sel: rgba(0, 0, 0, 0.06);
-        --tab-sel-ink: #007aff;
-        --log-fill: rgba(0, 122, 255, 0.9);
+        --tab-sel-ink: #0066d6;
+        --log-fill: rgba(0, 102, 214, 0.92);
         --log-ink: #ffffff;
         --placeholder-bg: #e5e5ea;
         --placeholder-ink: #8e8e93;
@@ -863,7 +863,7 @@
         --ink-2: #98989f;
         --ink-3: #98989f;
         --rule: rgba(84, 84, 88, 0.6);
-        --accent: #0a84ff;
+        --accent: #0a6cff;
         --accent-text: #3d9bff;
         --accent-ink: #ffffff;
         --star: #ff9f0a;
@@ -877,7 +877,7 @@
         --glass-shadow: 0 6px 22px rgba(0, 0, 0, 0.5);
         --tab-sel: rgba(255, 255, 255, 0.1);
         --tab-sel-ink: #3d9bff;
-        --log-fill: rgba(10, 132, 255, 0.9);
+        --log-fill: rgba(10, 108, 255, 0.92);
         --log-ink: #ffffff;
         --placeholder-bg: #2c2c2e;
         --placeholder-ink: #636366;
@@ -1527,6 +1527,17 @@
           overflow-x: visible;
           scroll-snap-type: none;
           row-gap: 36px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .btn,
+        .log-block {
+          transition: none;
+        }
+        .btn:active,
+        .log-block:active {
+          transform: none;
         }
       }
 
@@ -2598,7 +2609,7 @@
   <div class="panel"><div class="avg"><div><div class="big num">4.1</div><div class="sub num">1,284 ratings</div></div><div>${hist(8)}</div></div></div>
   <div class="panel edition"><div class="t"><div class="k">Edition</div><div class="v">Original release · 2019 · 11 tracks</div></div><span class="n">3${icon("chev", "ico row-ico")}</span></div>
   <h2 class="section-h">tracklist <small>45:38</small></h2>
-  <div class="panel" style="margin-top:10px"><div class="curve" role="img" aria-label="Your rating curve against everyone's">${curve}</div><div class="curve-axis">${TRACKS.map((_, i) => `<span>${i + 1}</span>`).join("")}</div><div class="legend"><span><i style="background:var(--accent)"></i>you</span><span><i style="background:var(--tick);height:2px;vertical-align:3px"></i>everyone</span></div></div>
+  <div class="panel" style="margin-top:10px"><div class="curve" role="img" aria-label="Your rating curve against everyone's">${curve}</div><div class="curve-axis">${TRACKS.map((_, i) => `<span>${i + 1}</span>`).join("")}</div><div class="legend"><span><i style="background:var(--accent)"></i>you</span><span><i style="background:var(--tick);height:2px;vertical-align:3px"></i>everyone</span><span><i style="background:repeating-linear-gradient(135deg, var(--rule) 0 3px, transparent 3px 6px)"></i>not rated</span></div></div>
   <div class="tracks">${tracks}</div>
   <h2 class="section-h">recent reviews <small>212</small></h2>
   <div style="margin-top:6px">${reviews}</div>
@@ -2621,7 +2632,7 @@
           id: "standard",
           name: "Standard",
           note: "The system’s own colours, like the built-in apps.",
-          sw: ["#f2f2f7", "#000000", "#007aff", "#ff9500"],
+          sw: ["#f2f2f7", "#000000", "#0066d6", "#ff9500"],
         },
       ];
       function settingsScreen(look) {
@@ -2765,7 +2776,7 @@
       <h1 class="al-title">Low Season</h1><div class="al-artist">Marigold Hour</div>
       <div class="specline" style="margin:0"><span class="spec"><i class="series" style="background:${SERIES.Album}"></i>Album · 2019 · Dream pop, Shoegaze</span><span class="badge-aw">${icon("spark", "ico fill")}aux-worthy</span></div>
       <div class="d-two"><div class="panel"><div class="avg"><div><div class="big num">4.1</div><div class="sub num">1,284 ratings</div></div><div>${hist(8)}</div></div></div>
-      <div class="panel"><div class="curve" style="margin:0" role="img" aria-label="Your rating curve against everyone's">${curve}</div><div class="curve-axis">${TRACKS.map((_, i) => `<span>${i + 1}</span>`).join("")}</div><div class="legend"><span><i style="background:var(--accent)"></i>you</span><span><i style="background:var(--tick);height:2px;vertical-align:3px"></i>everyone</span><span><i style="background:repeating-linear-gradient(135deg, var(--rule) 0 2px, transparent 2px 4px)"></i>not rated</span></div></div></div>
+      <div class="panel"><div class="curve" style="margin:0" role="img" aria-label="Your rating curve against everyone's">${curve}</div><div class="curve-axis">${TRACKS.map((_, i) => `<span>${i + 1}</span>`).join("")}</div><div class="legend"><span><i style="background:var(--accent)"></i>you</span><span><i style="background:var(--tick);height:2px;vertical-align:3px"></i>everyone</span><span><i style="background:repeating-linear-gradient(135deg, var(--rule) 0 3px, transparent 3px 6px)"></i>not rated</span></div></div></div>
       <div class="panel edition"><div class="t"><div class="k">Edition</div><div class="v">Original release · 2019 · 11 tracks</div></div><span class="n">3 editions${icon("chev", "ico row-ico")}</span></div>
       <h2 class="section-h">tracklist <small>45:38</small></h2>
       <div class="tracks">${tracks}</div>
