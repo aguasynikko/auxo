@@ -1,0 +1,663 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-23T13:44:52+00:00",
+  "title": "Design System: auxo",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Cool Paper",
+        "canonical": "#f2f3f5",
+        "tonalRamp": [
+          "#1b1d21",
+          "#2e3136",
+          "#44484f",
+          "#5d6169",
+          "#8d929a",
+          "#c3c7cd",
+          "#e3e5e9",
+          "#f2f3f5"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Panel White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#1b1d21",
+          "#2e3136",
+          "#44484f",
+          "#5d6169",
+          "#8d929a",
+          "#c3c7cd",
+          "#e3e5e9",
+          "#f2f3f5"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#0b0c0e",
+        "tonalRamp": [
+          "#1b1d21",
+          "#2e3136",
+          "#44484f",
+          "#5d6169",
+          "#8d929a",
+          "#c3c7cd",
+          "#e3e5e9",
+          "#f2f3f5"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink 2",
+        "canonical": "#4f535a",
+        "tonalRamp": [
+          "#1b1d21",
+          "#2e3136",
+          "#44484f",
+          "#5d6169",
+          "#8d929a",
+          "#c3c7cd",
+          "#e3e5e9",
+          "#f2f3f5"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Ink 3",
+        "canonical": "#6b6f77",
+        "tonalRamp": [
+          "#1b1d21",
+          "#2e3136",
+          "#44484f",
+          "#5d6169",
+          "#8d929a",
+          "#c3c7cd",
+          "#e3e5e9",
+          "#f2f3f5"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "canonical": "rgba(11, 12, 14, 0.1)",
+        "tonalRamp": [
+          "#1b1d21",
+          "#2e3136",
+          "#44484f",
+          "#5d6169",
+          "#8d929a",
+          "#c3c7cd",
+          "#e3e5e9",
+          "#f2f3f5"
+        ]
+      },
+      "ultramarine": {
+        "role": "primary",
+        "displayName": "Ultramarine",
+        "canonical": "#2e3bff",
+        "tonalRamp": [
+          "#0d1170",
+          "#1a22b3",
+          "#2430e6",
+          "#2e3bff",
+          "#4553ff",
+          "#6b77ff",
+          "#a3abff",
+          "#dde0ff"
+        ]
+      },
+      "on-ultramarine": {
+        "role": "neutral",
+        "displayName": "On Ultramarine",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#1b1d21",
+          "#2e3136",
+          "#44484f",
+          "#5d6169",
+          "#8d929a",
+          "#c3c7cd",
+          "#e3e5e9",
+          "#f2f3f5"
+        ]
+      },
+      "star": {
+        "role": "neutral",
+        "displayName": "Ink Star",
+        "canonical": "#0b0c0e",
+        "tonalRamp": [
+          "#1b1d21",
+          "#2e3136",
+          "#44484f",
+          "#5d6169",
+          "#8d929a",
+          "#c3c7cd",
+          "#e3e5e9",
+          "#f2f3f5"
+        ]
+      },
+      "star-empty": {
+        "role": "neutral",
+        "displayName": "Empty Star",
+        "canonical": "rgba(11, 12, 14, 0.14)",
+        "tonalRamp": [
+          "#1b1d21",
+          "#2e3136",
+          "#44484f",
+          "#5d6169",
+          "#8d929a",
+          "#c3c7cd",
+          "#e3e5e9",
+          "#f2f3f5"
+        ]
+      },
+      "placeholder": {
+        "role": "neutral",
+        "displayName": "Placeholder",
+        "canonical": "#e3e5e9",
+        "tonalRamp": [
+          "#1b1d21",
+          "#2e3136",
+          "#44484f",
+          "#5d6169",
+          "#8d929a",
+          "#c3c7cd",
+          "#e3e5e9",
+          "#f2f3f5"
+        ]
+      },
+      "placeholder-ink": {
+        "role": "neutral",
+        "displayName": "Placeholder Mark",
+        "canonical": "#8d929a",
+        "tonalRamp": [
+          "#1b1d21",
+          "#2e3136",
+          "#44484f",
+          "#5d6169",
+          "#8d929a",
+          "#c3c7cd",
+          "#e3e5e9",
+          "#f2f3f5"
+        ]
+      },
+      "night": {
+        "role": "neutral",
+        "displayName": "True Black",
+        "canonical": "#000000",
+        "tonalRamp": [
+          "#1b1d21",
+          "#2e3136",
+          "#44484f",
+          "#5d6169",
+          "#8d929a",
+          "#c3c7cd",
+          "#e3e5e9",
+          "#f2f3f5"
+        ]
+      },
+      "night-surface": {
+        "role": "neutral",
+        "displayName": "Night Surface",
+        "canonical": "#111316",
+        "tonalRamp": [
+          "#1b1d21",
+          "#2e3136",
+          "#44484f",
+          "#5d6169",
+          "#8d929a",
+          "#c3c7cd",
+          "#e3e5e9",
+          "#f2f3f5"
+        ]
+      },
+      "night-ink": {
+        "role": "neutral",
+        "displayName": "Night Ink",
+        "canonical": "#f3f4f6",
+        "tonalRamp": [
+          "#1b1d21",
+          "#2e3136",
+          "#44484f",
+          "#5d6169",
+          "#8d929a",
+          "#c3c7cd",
+          "#e3e5e9",
+          "#f2f3f5"
+        ]
+      },
+      "night-ink-2": {
+        "role": "neutral",
+        "displayName": "Night Ink 2",
+        "canonical": "#a8acb3",
+        "tonalRamp": [
+          "#1b1d21",
+          "#2e3136",
+          "#44484f",
+          "#5d6169",
+          "#8d929a",
+          "#c3c7cd",
+          "#e3e5e9",
+          "#f2f3f5"
+        ]
+      },
+      "night-ink-3": {
+        "role": "neutral",
+        "displayName": "Night Ink 3",
+        "canonical": "#8b9098",
+        "tonalRamp": [
+          "#1b1d21",
+          "#2e3136",
+          "#44484f",
+          "#5d6169",
+          "#8d929a",
+          "#c3c7cd",
+          "#e3e5e9",
+          "#f2f3f5"
+        ]
+      },
+      "night-rule": {
+        "role": "neutral",
+        "displayName": "Night Rule",
+        "canonical": "rgba(255, 255, 255, 0.11)",
+        "tonalRamp": [
+          "#1b1d21",
+          "#2e3136",
+          "#44484f",
+          "#5d6169",
+          "#8d929a",
+          "#c3c7cd",
+          "#e3e5e9",
+          "#f2f3f5"
+        ]
+      },
+      "night-ultramarine": {
+        "role": "primary",
+        "displayName": "Night Ultramarine",
+        "canonical": "#4553ff",
+        "tonalRamp": [
+          "#0d1170",
+          "#1a22b3",
+          "#2430e6",
+          "#2e3bff",
+          "#4553ff",
+          "#6b77ff",
+          "#a3abff",
+          "#dde0ff"
+        ]
+      },
+      "night-ultramarine-text": {
+        "role": "primary",
+        "displayName": "Night Ultramarine Text",
+        "canonical": "#8d96ff",
+        "tonalRamp": [
+          "#0d1170",
+          "#1a22b3",
+          "#2430e6",
+          "#2e3bff",
+          "#4553ff",
+          "#6b77ff",
+          "#a3abff",
+          "#dde0ff"
+        ]
+      },
+      "night-placeholder": {
+        "role": "neutral",
+        "displayName": "Night Placeholder",
+        "canonical": "#1a1c20",
+        "tonalRamp": [
+          "#1b1d21",
+          "#2e3136",
+          "#44484f",
+          "#5d6169",
+          "#8d929a",
+          "#c3c7cd",
+          "#e3e5e9",
+          "#f2f3f5"
+        ]
+      },
+      "night-placeholder-ink": {
+        "role": "neutral",
+        "displayName": "Night Placeholder Mark",
+        "canonical": "#5d6169",
+        "tonalRamp": [
+          "#1b1d21",
+          "#2e3136",
+          "#44484f",
+          "#5d6169",
+          "#8d929a",
+          "#c3c7cd",
+          "#e3e5e9",
+          "#f2f3f5"
+        ]
+      },
+      "series-album": {
+        "role": "tertiary",
+        "displayName": "Series: Album",
+        "canonical": "#2e3bff",
+        "tonalRamp": [
+          "#0d1170",
+          "#1a22b3",
+          "#2430e6",
+          "#2e3bff",
+          "#4553ff",
+          "#6b77ff",
+          "#a3abff",
+          "#dde0ff"
+        ]
+      },
+      "series-ep": {
+        "role": "tertiary",
+        "displayName": "Series: EP",
+        "canonical": "#0f9d6e",
+        "tonalRamp": [
+          "#053626",
+          "#08563c",
+          "#0b7a55",
+          "#0f9d6e",
+          "#2fb886",
+          "#66cfa7",
+          "#a6e4cb",
+          "#e0f6ed"
+        ]
+      },
+      "series-single": {
+        "role": "tertiary",
+        "displayName": "Series: Single",
+        "canonical": "#e8a400",
+        "tonalRamp": [
+          "#4a3400",
+          "#6e4e00",
+          "#a37400",
+          "#e8a400",
+          "#ffbb24",
+          "#ffcf66",
+          "#ffe2a3",
+          "#fff4dc"
+        ]
+      },
+      "series-live": {
+        "role": "tertiary",
+        "displayName": "Series: Live",
+        "canonical": "#e5484d",
+        "tonalRamp": [
+          "#4a1012",
+          "#7a1a1e",
+          "#b52a2f",
+          "#e5484d",
+          "#ec6f73",
+          "#f29a9d",
+          "#f8c6c7",
+          "#fdeced"
+        ]
+      },
+      "series-compilation": {
+        "role": "tertiary",
+        "displayName": "Series: Compilation",
+        "canonical": "#8b5cf6",
+        "tonalRamp": [
+          "#2a1361",
+          "#42209a",
+          "#6438dc",
+          "#8b5cf6",
+          "#a27ef8",
+          "#bda4fa",
+          "#d9cbfc",
+          "#f2ecfe"
+        ]
+      },
+      "series-soundtrack": {
+        "role": "tertiary",
+        "displayName": "Series: Soundtrack",
+        "canonical": "#0ea5b7",
+        "tonalRamp": [
+          "#04363c",
+          "#075861",
+          "#0a7f8c",
+          "#0ea5b7",
+          "#2fc0d1",
+          "#6bd5e1",
+          "#a9e7ee",
+          "#e1f7fa"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Big number",
+        "purpose": "The album's average rating. Display face and weight come from the theme."
+      },
+      "headline": {
+        "displayName": "Album title",
+        "purpose": "Album and screen titles in the theme's display face; 40px on wide screens."
+      },
+      "title": {
+        "displayName": "Section title",
+        "purpose": "Section heads such as listen later, november and tracklist."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "The phone's base size for cells, rows and buttons."
+      },
+      "label": {
+        "displayName": "Spec line",
+        "purpose": "Uppercase release facts with tabular numerals, led by a series square."
+      }
+    },
+    "shadows": [
+      {
+        "name": "glass-light",
+        "value": "0 6px 22px rgba(0, 0, 0, 0.13)",
+        "purpose": "Catalogue light glass drop shadow (each theme sets --glass-shadow)."
+      },
+      {
+        "name": "glass-dark",
+        "value": "0 6px 22px rgba(0, 0, 0, 0.5)",
+        "purpose": "Catalogue dark glass drop shadow."
+      },
+      {
+        "name": "glass-rim",
+        "value": "inset 0 0 0 0.5px var(--glass-rim)",
+        "purpose": "Hairline rim on every glass surface."
+      },
+      {
+        "name": "glass-specular",
+        "value": "inset 0 1px 0.5px var(--glass-spec)",
+        "purpose": "Specular line along the top of every glass surface."
+      },
+      {
+        "name": "hero-cover",
+        "value": "0 24px 40px -24px rgba(0, 0, 0, 0.5)",
+        "purpose": "The album page's main cover only. Panels have no shadows."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+        "purpose": "Every movement."
+      },
+      {
+        "name": "press",
+        "value": "transform 0.18s; scale(0.96) on buttons, scale(0.98) on the log block",
+        "purpose": "Press feedback standing in for haptics."
+      },
+      {
+        "name": "tabbar-minimise",
+        "value": "0.45s",
+        "purpose": "Tab pill and Log button size change when scrolling past about 120px."
+      },
+      {
+        "name": "tab-fade",
+        "value": "0.25s",
+        "purpose": "Unselected tabs fade when the bar minimises."
+      },
+      {
+        "name": "title-collapse",
+        "value": "opacity 0.2s, transform 0.25s (4px rise)",
+        "purpose": "Large title to inline title past about 44px of scroll."
+      },
+      {
+        "name": "scroll-edge",
+        "value": "opacity 0.2s",
+        "purpose": "Top scroll-edge fade."
+      },
+      {
+        "name": "haptic-bounce",
+        "value": "to be confirmed in the screen ticket",
+        "purpose": "Star bounce on rating (story 33) and bookmark bounce on listen later (story 57). Intent only, not in the reference build."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "transition: none",
+        "purpose": "Tab bar, Log button, inline title and scroll-edge fade change state instantly."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "0px"
+      },
+      {
+        "name": "wide",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Log and other primary actions.",
+      "html": "<button class=\"ds-btn-primary\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\"><path d=\"M12 5v14M5 12h14\"/></svg>Log</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 50px; padding: 0 28px; border: 0; border-radius: var(--r-btn, 14px); background: var(--accent, #2e3bff); color: var(--accent-ink, #fff); font: 600 17px -apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, system-ui, sans-serif; cursor: pointer; transition: transform .18s cubic-bezier(.2,.8,.2,1); } .ds-btn-primary:active { transform: scale(.96); } .ds-btn-primary:focus-visible { outline: 2px solid var(--accent, #2e3bff); outline-offset: 3px; }"
+    },
+    {
+      "name": "Plain Button",
+      "kind": "button",
+      "refersTo": "button-plain",
+      "description": "Icon buttons for listen later and loved; the icon takes the accent when on.",
+      "html": "<button class=\"ds-btn-plain\" aria-label=\"Loved\" aria-pressed=\"true\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\"><path fill=\"currentColor\" d=\"M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z\"/></svg></button>",
+      "css": ".ds-btn-plain { width: 50px; height: 50px; display: grid; place-items: center; border: 0; border-radius: var(--r-btn, 14px); background: var(--surface, #fff); color: var(--ink, #0b0c0e); cursor: pointer; transition: transform .18s cubic-bezier(.2,.8,.2,1); } .ds-btn-plain[aria-pressed=\"true\"] { color: var(--accent-text, #2e3bff); } .ds-btn-plain:active { transform: scale(.96); } .ds-btn-plain:focus-visible { outline: 2px solid var(--accent, #2e3bff); outline-offset: 3px; }"
+    },
+    {
+      "name": "Log Block",
+      "kind": "button",
+      "refersTo": "log-block",
+      "description": "The full-width What's on the aux? button on Home.",
+      "html": "<button class=\"ds-log-block\"><span class=\"ds-log-t\"><strong>What’s on the aux?</strong><small>Log a listen, rate it, say why</small></span><span class=\"ds-log-plus\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\"><path d=\"M12 5v14M5 12h14\"/></svg></span></button>",
+      "css": ".ds-log-block { display: flex; align-items: center; gap: 14px; width: 340px; border: 0; text-align: left; background: var(--accent, #2e3bff); color: var(--accent-ink, #fff); border-radius: var(--r-log, 16px); padding: 16px 16px 16px 18px; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, system-ui, sans-serif; cursor: pointer; transition: transform .18s cubic-bezier(.2,.8,.2,1); } .ds-log-block:active { transform: scale(.98); } .ds-log-block:focus-visible { outline: 2px solid var(--accent, #2e3bff); outline-offset: 3px; } .ds-log-t { flex: 1; display: grid; gap: 2px; } .ds-log-t strong { font-size: 19px; font-weight: 800; letter-spacing: -0.01em; } .ds-log-t small { font-size: 13px; opacity: .85; } .ds-log-plus { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: rgba(255,255,255,.18); }"
+    },
+    {
+      "name": "Glass Tab Bar",
+      "kind": "nav",
+      "refersTo": "tab-pill",
+      "description": "Floating four-tab glass pill with the separate round glass Log button. Safari base glass shown.",
+      "html": "<nav class=\"ds-tabbar\" aria-label=\"Tabs\"><div class=\"ds-tabpill ds-glass\"><a class=\"ds-tab ds-sel\" aria-current=\"page\" href=\"#\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3.5 10.2 12 3.5l8.5 6.7V19a1.5 1.5 0 0 1-1.5 1.5h-4.2v-6h-5.6v6H5A1.5 1.5 0 0 1 3.5 19z\"/></svg><span>Home</span></a><a class=\"ds-tab\" href=\"#\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\"><circle cx=\"11\" cy=\"11\" r=\"6.5\"/><path d=\"m20 20-4.4-4.4\"/></svg><span>Search</span></a><a class=\"ds-tab\" href=\"#\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M6.5 3.5H18a1.5 1.5 0 0 1 1.5 1.5v14a1.5 1.5 0 0 1-1.5 1.5H6.5A2 2 0 0 1 4.5 18.5v-13a2 2 0 0 1 2-2z\"/><path d=\"M8.5 8h7M8.5 11.5h7M8.5 15h4\"/></svg><span>Diary</span></a><a class=\"ds-tab\" href=\"#\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\"><circle cx=\"12\" cy=\"8.5\" r=\"3.8\"/><path d=\"M4.8 20.2a7.4 7.4 0 0 1 14.4 0\"/></svg><span>Profile</span></a></div><button class=\"ds-logbtn ds-glass\" aria-label=\"Log a listen\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\"><path d=\"M12 5v14M5 12h14\"/></svg></button></nav>",
+      "css": ".ds-tabbar { display: flex; gap: 10px; align-items: center; width: 361px; padding: 24px; background: linear-gradient(135deg, #e08f72, #5e4f8a); } .ds-glass { background: var(--glass-fill, rgba(255,255,255,.5)); -webkit-backdrop-filter: blur(12px) saturate(180%); backdrop-filter: blur(12px) saturate(180%); box-shadow: var(--glass-shadow, 0 6px 22px rgba(0,0,0,.13)), inset 0 0 0 0.5px var(--glass-rim, rgba(255,255,255,.75)), inset 0 1px 0.5px var(--glass-spec, rgba(255,255,255,.9)); } .ds-tabpill { flex: 1; height: 62px; border-radius: 31px; display: flex; padding: 4px; } .ds-tab { flex: 1 0 0; display: grid; justify-items: center; align-content: center; gap: 1px; border-radius: 27px; font: 600 10px -apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, system-ui, sans-serif; letter-spacing: .01em; color: var(--ink, #0b0c0e); text-decoration: none; } .ds-tab:hover { background: rgba(11,12,14,.04); } .ds-tab.ds-sel { background: var(--tab-sel, rgba(11,12,14,.07)); color: var(--tab-sel-ink, #2e3bff); } .ds-tab:focus-visible { outline: 2px solid var(--accent, #2e3bff); outline-offset: 3px; } .ds-logbtn { width: 62px; height: 62px; border-radius: 31px; border: 0; display: grid; place-items: center; color: var(--log-ink, #fff); background: var(--log-fill, #2e3bff); cursor: pointer; } .ds-logbtn:focus-visible { outline: 2px solid var(--accent, #2e3bff); outline-offset: 3px; }"
+    },
+    {
+      "name": "Glass Control",
+      "kind": "button",
+      "refersTo": "glass-button",
+      "description": "44px round floating control on the ground above the cover, never over artwork.",
+      "html": "<button class=\"ds-gbtn\" aria-label=\"Back\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m14.5 18.5-6.5-6.5 6.5-6.5\"/></svg></button>",
+      "css": ".ds-gbtn { width: 44px; height: 44px; border-radius: 22px; border: 0; display: grid; place-items: center; color: var(--ink, #0b0c0e); cursor: pointer; background: var(--glass-fill, rgba(255,255,255,.5)); -webkit-backdrop-filter: blur(12px) saturate(180%); backdrop-filter: blur(12px) saturate(180%); box-shadow: var(--glass-shadow, 0 6px 22px rgba(0,0,0,.13)), inset 0 0 0 0.5px var(--glass-rim, rgba(255,255,255,.75)), inset 0 1px 0.5px var(--glass-spec, rgba(255,255,255,.9)); } .ds-gbtn:hover { filter: brightness(1.03); } .ds-gbtn:focus-visible { outline: 2px solid var(--accent, #2e3bff); outline-offset: 3px; } @media (prefers-reduced-transparency: reduce) { .ds-gbtn { background: var(--glass-solid, #fff); -webkit-backdrop-filter: none; backdrop-filter: none; } }"
+    },
+    {
+      "name": "Spec Line",
+      "kind": "chip",
+      "refersTo": "series-mark",
+      "description": "Series square and uppercase release facts with tabular numerals.",
+      "html": "<span class=\"ds-spec\"><i class=\"ds-series\"></i>Album · 2019 · Dream pop, Shoegaze</span>",
+      "css": ".ds-spec { display: inline-flex; align-items: center; gap: 6px; font: 600 11px -apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, system-ui, sans-serif; letter-spacing: .06em; text-transform: uppercase; font-variant-numeric: tabular-nums; color: var(--ink-3, #6b6f77); } .ds-series { width: 8px; height: 8px; border-radius: 2px; background: #2e3bff; display: inline-block; }"
+    },
+    {
+      "name": "Diary Month Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "A month of diary entries in one panel with day numerals and inset hairlines.",
+      "html": "<div class=\"ds-month\"><div class=\"ds-entry\"><div class=\"ds-day\"><b>22</b><small>Sun</small></div><div class=\"ds-cover\"></div><div class=\"ds-mid\"><div class=\"ds-ttl\">Low Season</div><div class=\"ds-art\">Marigold Hour</div><span class=\"ds-stars\" role=\"img\" aria-label=\"4.5 out of 5 stars\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\"><path d=\"M12 2.6l2.83 5.92 6.5.86-4.76 4.5 1.2 6.45L12 17.2l-5.77 3.13 1.2-6.45-4.76-4.5 6.5-.86z\" fill=\"currentColor\"/></svg><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\"><path d=\"M12 2.6l2.83 5.92 6.5.86-4.76 4.5 1.2 6.45L12 17.2l-5.77 3.13 1.2-6.45-4.76-4.5 6.5-.86z\" fill=\"currentColor\"/></svg><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\"><path d=\"M12 2.6l2.83 5.92 6.5.86-4.76 4.5 1.2 6.45L12 17.2l-5.77 3.13 1.2-6.45-4.76-4.5 6.5-.86z\" fill=\"currentColor\"/></svg><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\"><path d=\"M12 2.6l2.83 5.92 6.5.86-4.76 4.5 1.2 6.45L12 17.2l-5.77 3.13 1.2-6.45-4.76-4.5 6.5-.86z\" fill=\"currentColor\"/></svg><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\"><path d=\"M12 2.6l2.83 5.92 6.5.86-4.76 4.5 1.2 6.45L12 17.2l-5.77 3.13 1.2-6.45-4.76-4.5 6.5-.86z\" fill=\"rgba(11,12,14,.14)\"/></svg></span></div></div><div class=\"ds-entry\"><div class=\"ds-day\"><b>21</b><small>Sat</small></div><div class=\"ds-cover\" style=\"background:#1b4c52\"></div><div class=\"ds-mid\"><div class=\"ds-ttl\">Greenhouse</div><div class=\"ds-art\">Wren &amp; the Weather</div><span class=\"ds-stars\" role=\"img\" aria-label=\"4 out of 5 stars\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\"><path d=\"M12 2.6l2.83 5.92 6.5.86-4.76 4.5 1.2 6.45L12 17.2l-5.77 3.13 1.2-6.45-4.76-4.5 6.5-.86z\" fill=\"currentColor\"/></svg><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\"><path d=\"M12 2.6l2.83 5.92 6.5.86-4.76 4.5 1.2 6.45L12 17.2l-5.77 3.13 1.2-6.45-4.76-4.5 6.5-.86z\" fill=\"currentColor\"/></svg><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\"><path d=\"M12 2.6l2.83 5.92 6.5.86-4.76 4.5 1.2 6.45L12 17.2l-5.77 3.13 1.2-6.45-4.76-4.5 6.5-.86z\" fill=\"currentColor\"/></svg><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\"><path d=\"M12 2.6l2.83 5.92 6.5.86-4.76 4.5 1.2 6.45L12 17.2l-5.77 3.13 1.2-6.45-4.76-4.5 6.5-.86z\" fill=\"currentColor\"/></svg><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\"><path d=\"M12 2.6l2.83 5.92 6.5.86-4.76 4.5 1.2 6.45L12 17.2l-5.77 3.13 1.2-6.45-4.76-4.5 6.5-.86z\" fill=\"rgba(11,12,14,.14)\"/></svg></span></div></div></div>",
+      "css": ".ds-month { width: 353px; background: var(--surface, #fff); border-radius: var(--r-panel, 14px); overflow: hidden; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, system-ui, sans-serif; color: var(--ink, #0b0c0e); } .ds-entry { display: grid; grid-template-columns: 38px 48px 1fr; gap: 12px; align-items: center; padding: 12px 14px 12px 12px; position: relative; } .ds-entry:hover { background: rgba(11,12,14,.03); } .ds-entry + .ds-entry::before { content: \"\"; position: absolute; top: 0; left: 62px; right: 0; border-top: .5px solid var(--rule, rgba(11,12,14,.1)); } .ds-day { display: grid; justify-items: center; line-height: 1; } .ds-day b { font-size: 22px; font-weight: 700; letter-spacing: -.02em; font-variant-numeric: tabular-nums; } .ds-day small { font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3, #6b6f77); margin-top: 4px; } .ds-cover { width: 48px; height: 48px; border-radius: var(--r-art, 4px); background: #5e4f8a; } .ds-mid { display: grid; gap: 2px; min-width: 0; } .ds-ttl { font-size: 16px; font-weight: 600; letter-spacing: -.01em; } .ds-art { font-size: 13px; color: var(--ink-2, #4f535a); } .ds-stars { display: inline-flex; gap: 2px; color: var(--star, #0b0c0e); margin-top: 3px; }"
+    },
+    {
+      "name": "Track Curve",
+      "kind": "custom",
+      "refersTo": "panel",
+      "description": "Signature chart: your track ratings as accent bars, everyone's average as a tick, unrated tracks hatched.",
+      "html": "<div class=\"ds-curve-panel\"><div class=\"ds-curve\" role=\"img\" aria-label=\"Your rating curve against everyone's\"><div class=\"ds-col\"><div class=\"ds-bar\" style=\"height:80%\"></div><div class=\"ds-tick\" style=\"bottom:78%\"></div></div><div class=\"ds-col\"><div class=\"ds-bar\" style=\"height:100%\"></div><div class=\"ds-tick\" style=\"bottom:88%\"></div></div><div class=\"ds-col\"><div class=\"ds-bar\" style=\"height:70%\"></div><div class=\"ds-tick\" style=\"bottom:72%\"></div></div><div class=\"ds-col ds-none\"><div class=\"ds-bar\"></div></div><div class=\"ds-col\"><div class=\"ds-bar\" style=\"height:90%\"></div><div class=\"ds-tick\" style=\"bottom:84%\"></div></div></div><div class=\"ds-legend\"><span><i style=\"background:var(--accent,#2e3bff)\"></i>you</span><span><i style=\"background:var(--tick,#0b0c0e);height:2px;vertical-align:3px\"></i>everyone</span><span><i class=\"ds-hatch\"></i>not rated</span></div></div>",
+      "css": ".ds-curve-panel { width: 321px; background: var(--surface, #fff); border-radius: var(--r-panel, 14px); padding: 16px; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, system-ui, sans-serif; } .ds-curve { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; align-items: end; height: 70px; } .ds-col { position: relative; height: 100%; display: flex; align-items: flex-end; } .ds-bar { width: 100%; background: var(--accent, #2e3bff); border-radius: 2px 2px 0 0; } .ds-tick { position: absolute; left: -1px; right: -1px; height: 2px; background: var(--tick, #0b0c0e); } .ds-none .ds-bar, .ds-hatch { background: repeating-linear-gradient(135deg, var(--rule, rgba(11,12,14,.1)) 0 3px, transparent 3px 6px); height: 100%; } .ds-legend { display: flex; gap: 14px; font-size: 12px; color: var(--ink-2, #4f535a); margin-top: 10px; } .ds-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The House Style",
+    "overview": "auxo dresses like a record label's house style: an exact, quiet frame of type and numbers that presents every cover the same way, so the artwork changes and the frame never does. Cool paper grey and ink, one ultramarine for actions and selection, heavy system sans with tight tracking, tabular numbers, and small uppercase spec lines. The covers carry all the colour; the frame stays still.\n\nThe frame borrows the iPhone's own grammar (large titles, floating glass bars, grouped panels, sheets) because auxo should feel like a first-party app on the phone it lives on. It refuses the streaming-store page (big tinted hero, carousels of carousels) and the rating-site table.\n\nCatalogue is the default look. Sleeve and Standard are themes people pick in Settings (ADR [0009](docs/adr/0009-selectable-themes-catalogue-default.md)). A theme swaps tokens only: palette, star colour, glass tint, display face and corner radii. Layout, components and motion are shared, so a screen is designed and tested once and checked in all three themes, light and dark.",
+    "keyCharacteristics": [
+      "One frame for every cover: the artwork changes, the frame doesn't.",
+      "Ink and paper with a single ultramarine for actions and selection.",
+      "Spec lines: 11px uppercase, 0.06em tracking, tabular numbers, a series colour square.",
+      "Ink stars in Catalogue, not gold.",
+      "Floating glass for bars, controls and the sidebar only.",
+      "Light and dark follow the system in every theme."
+    ],
+    "rules": [
+      {
+        "name": "The One Blue Rule",
+        "body": "Ultramarine marks what you can do and what is selected. It is never decoration, never a background wash, and never a second accent beside another.",
+        "section": "colors"
+      },
+      {
+        "name": "The Series Rule",
+        "body": "Series colours mean album type and nothing else. They don't change with the theme, and they only appear as the small square in a spec line.",
+        "section": "colors"
+      },
+      {
+        "name": "The Token Rule",
+        "body": "Every colour, radius and display face in a component comes from a theme token.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "Ratings, counts, dates, durations and track numbers use tabular numerals so they line up down a column.",
+        "section": "typography"
+      },
+      {
+        "name": "The Spec Line Rule",
+        "body": "Facts about a release (type, year, genres, relisten) go in an uppercase 11px spec line led by its series square, never in a sentence.",
+        "section": "typography"
+      },
+      {
+        "name": "The Clear Cover Rule",
+        "body": "Glass never sits on album artwork. The album page's floating controls sit on the ground above the cover, and the cover starts below them. auxo must not feel like frosted chrome over the artwork.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Finished Fallback Rule",
+        "body": "The blur-and-tint glass is the design. Refraction is a bonus for some browsers, never a fix for a fallback that looks unfinished.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do take every colour, radius and display face from a theme token, and check each screen in all three themes, light and dark.",
+      "Do keep ultramarine for actions and selection only.",
+      "Do put release facts in a spec line with its series square.",
+      "Do use tabular numerals for every rating, count, date and duration.",
+      "Do make the blur-and-tint glass look finished before adding refraction.",
+      "Do honour reduced motion and reduced transparency.",
+      "Do give every album without artwork the placeholder cover."
+    ],
+    "donts": [
+      "Don't put glass on album artwork.",
+      "Don't use glass for panels, cards or content; it is for bars, controls and the sidebar.",
+      "Don't change layout, components or motion per theme.",
+      "Don't recolour the wordmark or icon for a theme, or capitalise auxo.",
+      "Don't use Apple logos, trademarks, the Apple Music name or SF Symbols artwork.",
+      "Don't use gold stars in Catalogue; its stars are ink.",
+      "Don't use series colours for anything but album type."
+    ]
+  }
+}

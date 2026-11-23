@@ -39,3 +39,10 @@ blob-report/
 
 # Vercel
 .vercel
+
+# Impeccable runtime files (briefs, design.json and config are committed)
+.impeccable/review/
+.impeccable/questions/
+.impeccable/mocks/
+.impeccable/hook.cache.json
+.impeccable/config.local.json

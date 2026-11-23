@@ -1,6 +1,6 @@
 # auxo — Milestone 1 spec: the core loop
 
-Vocabulary follows [GLOSSARY.md](./GLOSSARY.md). Decisions follow the [ADRs](./adr/). Visual design follows `DESIGN.md` (written in the design session; see Further Notes).
+Vocabulary follows [GLOSSARY.md](./GLOSSARY.md). Decisions follow the [ADRs](./adr/). Visual design follows [DESIGN.md](../DESIGN.md) (from the design session, issue #2; see Further Notes).
 
 ## Problem Statement
 
@@ -112,9 +112,9 @@ auxo is a music diary that installs on your iPhone home screen and feels like a 
 
 ### Look, feel and access
 
-72. As a mobile user, I want a bottom tab bar (Home, Search, Log +, Diary, Profile) on glass that shrinks when I scroll down, so that content has room.
+72. As a mobile user, I want a bottom tab bar (Home, Search, Diary, Profile) on glass with a round Log + button beside it, both shrinking when I scroll down, so that content has room and logging is always one tap away.
 73. As a desktop or iPad user, I want a sidebar with the auxo wordmark instead of the tab bar, so that the layout uses the width.
-74. As a user, I want light and dark mode that follow my system, so that auxo matches my phone.
+74. As a user, I want light and dark mode that follow my system, and a theme I choose once in Settings (Catalogue by default, Sleeve or Standard) that follows me to every device, so that auxo matches my phone and my taste.
 75. As a user who prefers reduced motion or transparency, I want auxo to honour those settings, so that it's comfortable to use.
 76. As a keyboard user, I want every action reachable by keyboard with visible focus, so that I'm not locked out.
 77. As a user with large text, I want layouts to scale, so that I can read everything.
@@ -150,7 +150,7 @@ auxo is a music diary that installs on your iPhone home screen and feels like a 
 
 - Catalog: `artists`, `albums` (release-group level: type, title, year, genres, canonical edition, `mbid`, `deezer_id`, `match_confidence`, `last_synced_at`), `album_editions`, `tracks` (recording-level: `mbid`), `edition_tracks` (edition, track, position, disc), `album_artists` / `track_artists` (ordered credits with join phrases), `musicbrainz_queue` (entity, external ID, priority, attempts, next_attempt_at, status).
 - Every catalog table keys on an auxo UUID with a short public ID for URLs; `mbid` and `deezer_id` are unique and nullable (ADR 0001).
-- User data: `profiles` (username unique, display name, avatar, bio, `role` user|admin, `is_private` reserved for M2), `album_ratings` (one per user per album; ADR 0004), `track_ratings` (user, track), `loved_albums`, `diary_entries` (user, album, optional edition, listened_on, rating snapshot, relisten, tags as a text array), `reviews` (one per diary entry, body ≤5,000, `edited_at`, `hidden` reserved for M2), `top3` (user, position 1–3, album; unique per position and per album), `listen_later` (user, album, added_at).
+- User data: `profiles` (username unique, display name, avatar, bio, `theme` catalogue|sleeve|standard defaulting to catalogue (ADR 0009), `role` user|admin, `is_private` reserved for M2), `album_ratings` (one per user per album; ADR 0004), `track_ratings` (user, track), `loved_albums`, `diary_entries` (user, album, optional edition, listened_on, rating snapshot, relisten, tags as a text array), `reviews` (one per diary entry, body ≤5,000, `edited_at`, `hidden` reserved for M2), `top3` (user, position 1–3, album; unique per position and per album), `listen_later` (user, album, added_at).
 - Derived: album average and rating counts per half-star kept in an aggregate table updated by trigger on `album_ratings`; aux-worthy computed from it with thresholds in config (avg ≥ 4.0, ≥ 10 ratings).
 - RLS on every user table: anyone signed in can read in M1; only the owner can write their rows; `role` is never writable from the client (ADR 0006). Policies are shaped so M2's private/blocked/hidden rules add predicates rather than restructure.
 
@@ -200,7 +200,7 @@ Supabase URL and anon key, Supabase service-role key (server only), MusicBrainz 
 
 ## Further Notes
 
-- **Design dependency:** screen tickets are blocked by the design session (impeccable: 2–3 directions → DESIGN.md) and the `<Glass>` + `/glass-lab` prototype tested on a real iPhone.
+- **Design dependency:** the design session is done (issue #2): [DESIGN.md](../DESIGN.md), the reference mock `docs/design/reference.html` and the brand files in `docs/design/brand/`. Screen tickets are still blocked by the `<Glass>` + `/glass-lab` prototype tested on a real iPhone, and replace the placeholder colour tokens with DESIGN.md's.
 - **Brand:** the product name is always lowercase "auxo", including page titles, the manifest and the icon label. Short UI labels may be lowercase in the auxo voice; longer text uses sentence case.
 - **Plans:** free Vercel and Supabase plans during development; upgrade both to Pro before public launch.
 - **Domain:** TBD; HTTPS is required for the PWA. The first production deploy happens in the last Milestone 1 ticket.
