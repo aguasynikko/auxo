@@ -1,24 +1,25 @@
 @import "tailwindcss";
 
-/* Placeholder tokens until DESIGN.md (#2) defines the real ones. */
+/* Placeholder tokens until DESIGN.md (#2) defines the real ones.
+   Raw values live in --auxo-*; @theme exposes them to Tailwind as bg-bg, text-fg, etc. */
 :root {
-  --color-bg: #ffffff;
-  --color-fg: #111111;
-  --color-fg-muted: #6b6b6b;
+  --auxo-bg: #ffffff;
+  --auxo-fg: #111111;
+  --auxo-fg-muted: #6b6b6b;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #0b0b0c;
-    --color-fg: #f2f2f2;
-    --color-fg-muted: #9a9a9a;
+    --auxo-bg: #0b0b0c;
+    --auxo-fg: #f2f2f2;
+    --auxo-fg-muted: #9a9a9a;
   }
 }
 
 @theme inline {
-  --color-bg: var(--color-bg);
-  --color-fg: var(--color-fg);
-  --color-fg-muted: var(--color-fg-muted);
+  --color-bg: var(--auxo-bg);
+  --color-fg: var(--auxo-fg);
+  --color-fg-muted: var(--auxo-fg-muted);
 }
 
 body {

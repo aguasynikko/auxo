@@ -1,5 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
+// @playwright/test is pinned to an exact version: browser binaries are tied to it.
+
 const port = 3100;
 const baseURL = `http://localhost:${port}`;
 
